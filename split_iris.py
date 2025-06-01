@@ -10,12 +10,12 @@ def split_iris_csv(input_csv='iris.csv'):
     iris_1 = df.iloc[:mid]
     iris_2 = df.iloc[mid:]
     # Get directory and filename
+    os.makedirs('part1',exist_ok=True)
+    os.makedirs('part2',exist_ok=True)
     directory = os.path.dirname(input_csv)
-    iris_1_path = os.path.join(directory, 'iris-1.csv')
-    iris_2_path = os.path.join(directory, 'iris-2.csv')
-    # Save the two parts
-    iris_1.to_csv(iris_1_path, index=False)
-    iris_2.to_csv(iris_2_path, index=False)
+
+    iris_1.to_csv("part1/iris.csv", index=False)
+    iris_2.to_csv("part2/iris.csv", index=False)
     print(f"Saved {iris_1_path} and {iris_2_path}")
 
 if __name__ == "__main__":
