@@ -16,7 +16,6 @@ def split_iris_csv(input_csv='iris.csv'):
 
     iris_1.to_csv("part1/iris.csv", index=False)
     iris_2.to_csv("part2/iris.csv", index=False)
-    print(f"Saved {iris_1_path} and {iris_2_path}")
 
 if __name__ == "__main__":
     split_iris_csv('iris.csv')
